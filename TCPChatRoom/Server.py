@@ -40,7 +40,7 @@ def receive():
         aliases.append(alias)
         clients.append(client)
         print(f"The alias of this client is {alias}".encode("utf-8"))
-        broadcast(f"{alias} has connected to the chat!".encode("utf-8"))
+        broadcast(f"{alias} has connected to the chat!\n".encode("utf-8"))
         client.send("You are now connected!".encode("utf-8"))
         thread = threading.Thread(target = handle_client, args = (client,))
         thread.start()
