@@ -12,7 +12,7 @@ port = 80
 
 try:
     host_ip = socket.gethostbyname("www.google.com")
-except socket.gaierror:                                     # problem with DNS
+except socket.gaierror:                                     # used in case of problem with DNS
     print("error resolving the host")
     sys.exit()
 s.connect((host_ip, port))
